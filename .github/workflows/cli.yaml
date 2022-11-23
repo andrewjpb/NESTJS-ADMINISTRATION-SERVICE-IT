@@ -2,7 +2,7 @@ name: ci-nestjs-workflow
 on: [push]
 jobs:
   check-application:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v2
       - uses: actions/setup-node@v2
