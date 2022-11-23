@@ -2,13 +2,9 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-
-
-
 describe('AppController', () => {
   let appController: AppController;
   let appService: AppService;
-  
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
@@ -21,9 +17,8 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return { ok:true }', () => {
-      const result = {ok:true}
+      const result = { ok: false };
       expect(appController.getHello()).toEqual(result);
-
     });
   });
 });
