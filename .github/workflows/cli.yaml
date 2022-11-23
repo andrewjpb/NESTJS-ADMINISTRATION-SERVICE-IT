@@ -1,6 +1,6 @@
 name: ci-nestjs-workflow
 on:
-  pull:
+  push:
     branches:
       - develop
 jobs:
