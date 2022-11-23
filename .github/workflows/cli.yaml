@@ -1,0 +1,12 @@
+name: ci-nestjs-workflow
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-latests
+    steps:
+      - uses: action/checkout@v2
+      - uses: actions/setup-node@v2
+    with:
+      node-version: 18.1.0
+    - run: npm test
+      
