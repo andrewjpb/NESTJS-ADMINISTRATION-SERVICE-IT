@@ -1,7 +1,7 @@
 name: ci-nestjs-workflow
 on:
   pull_request:
-    bramches:
+    branches:
       - develop
 jobs:
   check-application:
