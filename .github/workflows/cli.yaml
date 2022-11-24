@@ -34,5 +34,5 @@ jobs:
 
         with:
           push: true
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}//nestjs-administration-service-it
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it
           tags: ${{ github.sha }}, latest
