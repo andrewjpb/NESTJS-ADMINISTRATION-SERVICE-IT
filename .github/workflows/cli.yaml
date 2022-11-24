@@ -33,4 +33,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: andrewjpb/nestjs-administration-service-it:latest
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it
+          tags: ${{ github.sha }}, latest
