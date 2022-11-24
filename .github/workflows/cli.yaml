@@ -34,4 +34,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:${{ github.sha }}
