@@ -31,6 +31,7 @@ jobs:
 
       - name: Build and push
         uses: docker/build-push-action@v3
+
         with:
           push: true
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it
