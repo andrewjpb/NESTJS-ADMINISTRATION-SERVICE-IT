@@ -36,4 +36,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it
-          tags: ${{ github.sha }}, latest
+          tags: ${{ github.sha }}
