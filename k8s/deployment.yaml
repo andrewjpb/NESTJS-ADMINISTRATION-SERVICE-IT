@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestit
+spec:
+  selector:
+    matchLabels:
+      app: nestit
+  template:
+    metadata:
+      labels:
+        app: nestit
+    spec:
+      containers:
+        - name: nestit
+          image: nestit
+          ports:
+            - containerPort: 3000

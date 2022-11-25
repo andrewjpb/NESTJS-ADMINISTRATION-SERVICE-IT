@@ -1,13 +1,12 @@
 import { Injectable } from '@nestjs/common';
 
-
 export type returnProps = {
-  ok: Boolean
-}
+  ok: boolean;
+};
 
 @Injectable()
 export class AppService {
   getHello(): returnProps {
-    return {ok:true};
+    return { ok: true };
   }
 }
