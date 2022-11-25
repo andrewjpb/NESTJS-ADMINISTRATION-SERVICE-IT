@@ -37,9 +37,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:${{ github.sha }},${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:latest
 
       - name: Setup Kustomize
-        uses: imranismail/setup-kustomize@v1
-        with:
-          kustomize-version: '3.6.1'
+        uses: imranismail/setup-kustomize@v2
 
       - name: Update Kurbenetes resources
         env:
