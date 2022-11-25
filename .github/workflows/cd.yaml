@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['18.1.0', '19.1.0']
+        node: ['19.1.0']
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
@@ -42,9 +42,11 @@ jobs:
       - name: Update Kurbenetes resources
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+
         run: |
           cd k8s
           kustomize edit set image nestit=$DOCKER_USERNAME/nestjs-administration-service-it:$GITHUB_SHA
+
       - name: Commit
         run: |
           git config --local user.email "action@github.com"
