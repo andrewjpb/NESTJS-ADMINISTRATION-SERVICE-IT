@@ -35,3 +35,26 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:${{ github.sha }},${{ secrets.DOCKERHUB_USERNAME }}/nestjs-administration-service-it:latest
+
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize-version: '3.6.1'
+
+      - name: Update Kurbenetes resources
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run: |
+          cd k8s
+          kustomize edit set image nestit=$DOCKER_USERNAME/nestjs-administration-service-it:$GITHUB_SHA
+      - name: Commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Bump docker version"
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN_GITHUB }}
+          repository: andrewjpb/NESTJS-ADMINISTRATION-SERVICE-IT
