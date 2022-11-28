@@ -5,5 +5,5 @@ resources:
 - service.yaml
 images:
 - name: nestit
-  newName: /nestjs-administration-service-it
-  newTag: 8a990d7cca21d10cfe756b252c9dcc00c34bcea2
+  newName: andrewjpb/nestjs-administration-service-it
+  newTag: 8de33fc55249a21f9bc47aafdbf0a526c2d4f313
