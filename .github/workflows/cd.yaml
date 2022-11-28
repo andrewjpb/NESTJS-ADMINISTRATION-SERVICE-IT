@@ -45,7 +45,7 @@ jobs:
 
         run: |
           cd k8s
-          kustomize edit set image nestit=$DOCKERHUB_USERNAME/nestjs-administration-service-it:$GITHUB_SHA
+          kustomize edit set image nestit=andrewjpb/nestjs-administration-service-it:$GITHUB_SHA
 
       - name: chegout branche develop
         run: |
