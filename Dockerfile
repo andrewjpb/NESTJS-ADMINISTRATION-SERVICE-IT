@@ -6,7 +6,8 @@ WORKDIR /usr/src/app
 
 ENV HELLO=TESTE
 
-EXPOSE 3000
+EXPOSE 3000/tcp
+EXPOSE 3000/udp
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
