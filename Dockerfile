@@ -4,6 +4,8 @@ FROM node:19
 # Create app directory
 WORKDIR /usr/src/app
 
+ENV HELLO=TESTE
+
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
