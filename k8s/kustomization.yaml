@@ -6,4 +6,4 @@ resources:
 images:
 - name: nestit
   newName: andrewjpb/nestjs-administration-service-it
-  newTag: 8de33fc55249a21f9bc47aafdbf0a526c2d4f313
+  newTag: 81a22506879e774a4fa3c98e34d41728b8e596b9
